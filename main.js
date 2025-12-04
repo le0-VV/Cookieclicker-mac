@@ -1325,11 +1325,6 @@ Game.Launch=function()
 		'<a href="https://twitter.com/orteil42" target="_blank" class="highlightHover smallBlackButton">twitter</a>',
 		]))
 	+'</div>'+
-	(!App?'<div class="listing block" style="margin:8px 32px;font-size:11px;line-height:110%;color:rgba(200,200,255,1);background:rgba(128,128,255,0.15);" id="supportSection">'+loc(
-		"This version of Cookie Clicker is 100% free, forever. Want to support us so we can keep developing games? Here's some ways you can help:%1",
-		[(!App?'<br><br>&bull; '+(EN?'get ':'')+'<a href="https://store.steampowered.com/app/1454400/Cookie_Clicker/" target="_blank" class="highlightHover smallWhiteButton">Cookie Clicker on Steam</a>':'')+''+(EN?' (it\'s about 5 bucks)':'')+'<br><br>&bull; '+(EN?'support us on ':'')+'<a href="https://www.patreon.com/dashnet" target="_blank" class="highlightHover smallOrangeButton">Patreon</a>'+(EN?' (there\'s perks!)':'')+'<br><br>&bull; '+(EN?'check out our ':'')+'<a href="http://www.redbubble.com/people/dashnet" target="_blank" class="highlightHover smallWhiteButton">Shop</a>'+(EN?' with rad cookie shirts, hoodies and stickers':'')+((!App && EN)?'<br><br>&bull; disable your adblocker (if you want!)':'')]
-	)+
-	'</div></div>':'')+
 	'<div class="listing warning">'+loc("Note: if you find a new bug after an update and you're using a 3rd-party add-on, make sure it's not just your add-on causing it!")+'</div>'+
 	(!App?('<div class="listing warning">'+loc("Warning: clearing your browser cache or cookies <small>(what else?)</small> will result in your save being wiped. Export your save and back it up first!")+'</div>'):'')+
 	
@@ -1389,9 +1384,9 @@ Game.Launch=function()
 	'<div class="listing">&bull; added Discord rich presence support</div>'):'')+
 	
 	'</div><div class="subsection update">'+
-	'<div class="title">01/09/2021 - give me Steam</div>'+
-	'<div class="listing">&bull; Cookie Clicker has been <a href="https://store.steampowered.com/app/1454400/Cookie_Clicker/" target="_blank">released on Steam</a> with music by C418!</div>'+
-	'<div class="listing">&bull; web version and Steam version will receive the same updates from now on</div>'+
+	'<div class="title">01/09/2021 - big release</div>'+
+	'<div class="listing">&bull; Cookie Clicker received a major release with music by C418!</div>'+
+	'<div class="listing">&bull; web and standalone versions will receive the same updates from now on</div>'+
 	'<div class="listing">&bull; you can now play in 13 different languages</div>'+
 	'<div class="listing">&bull; new option to disable scary stuff</div>'+
 	'<div class="listing">&bull; basic screen-reader support</div>'+
@@ -1443,8 +1438,6 @@ Game.Launch=function()
 	'<div class="listing">&bull; more upgrades, achievements etc</div>'+
 	'<div class="listing">&bull; updated the Russian bread cookies icon to better reflect their cyrillic origins</div>'+
 	'<div class="listing">&bull; <i style="font-style:italic;">stealth update :</i> the sugar lump refill timeout (not sugar lump growth) now no longer ticks down while the game is closed (this fixes an exploit)</div>'+
-	'<div class="listing">&bull; also released the official Android version of Cookie Clicker, playable <a href="https://play.google.com/store/apps/details?id=org.dashnet.cookieclicker" target="_blank">here</a> (iOS version will come later)</div>'+
-	
 	'</div><div class="subsection update small">'+
 	'<div class="title">01/04/2019 - 2.019 (the "this year" update)</div>'+
 	'<div class="listing">&bull; game has been renamed to "Cookie Clicker" to avoid confusion</div>'+
@@ -1460,7 +1453,7 @@ Game.Launch=function()
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">05/03/2019 - cookies for days</div>'+
-	'<div class="listing">&bull; added over 20 new cookies, all previously suggested by our supporters on <a href="https://www.patreon.com/dashnet" target="_blank">Patreon</a></div>'+
+	'<div class="listing">&bull; added over 20 new cookies</div>'+
 	'<div class="listing">&bull; added 2 heavenly upgrades</div>'+
 	'<div class="listing">&bull; the Golden goose egg now counts as a golden cookie upgrade for Residual luck purposes</div>'+
 	'<div class="listing">&bull; golden sugar lumps now either double your cookies, or give you 24 hours of your CpS, whichever is lowest (previously was doubling cookies with no cap)</div>'+
@@ -1473,15 +1466,12 @@ Game.Launch=function()
 	'<div class="listing">&bull; fixed a bug with golden cookies/reindeer not disappearing properly in some circumstances</div>'+
 	'<div class="listing">&bull; the Dragon\'s Curve aura should now properly make sugar lumps twice as weird</div>'+
 	'<div class="listing">&bull; the ctrl key should less often register incorrectly as pressed</div>'+
-	'<div class="listing">&bull; added a new ad slot in the top-right, as while our playerbase is strong and supportive as ever, our ad revenue sometimes fluctuates badly; we may remove the ad again should our income stabilize</div>'+
 	'<div class="listing">&bull; made a few adjustments to make the game somewhat playable in mobile browsers; it\'s not perfect and can get buggy, but it\'s functional! (you may need to zoom out or scroll around to view the game properly)</div>'+
-	'<div class="listing">&bull; speaking of which, we also got some good progress on the mobile app version (built from scratch for mobile), so stay tuned!</div>'+
 	
 	'</div><div class="subsection update">'+
 	'<div class="title">25/10/2018 - feedback loop</div>'+
 	'<div class="listing">&bull; added a new building</div>'+
-	'<div class="listing">&bull; launched our <a href="https://www.patreon.com/dashnet" class="orangeLink" target="_blank">Patreon</a> <span style="font-size:80%;">(the link is orange so you\'ll notice it!)</span></div>'+
-	'<div class="listing">&bull; added a bunch of new heavenly upgrades, one of which ties into our Patreon but benefits everyone (this is still experimental!)</div>'+
+	'<div class="listing">&bull; added a bunch of new heavenly upgrades</div>'+
 	'<div class="listing">&bull; when hovering over grandmas, you can now see their names and ages</div>'+
 	'<div class="listing">&bull; "make X cookies just from Y" requirements are now higher</div>'+
 	'<div class="listing">&bull; tweaked the prices of some heavenly upgrades to better fit the current cookie economy (it turns out billions of heavenly chips is now very achievable)</div>'+
@@ -1715,7 +1705,6 @@ Game.Launch=function()
 	'<div class="listing">&bull; miscellaneous fixes and tiny additions</div>'+
 	'<div class="listing">&bull; added a few very rudimentary mod hooks</div>'+
 	'<div class="listing">&bull; the game should work again in Opera</div>'+
-	'<div class="listing">&bull; don\'t forget to check out <a href="//orteil.dashnet.org/randomgen/" target="_blank">RandomGen</a>, our all-purpose random generator maker!</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">01/04/2014 - fooling around</div>'+
@@ -2172,7 +2161,7 @@ Game.Launch=function()
 			Game.prefs.showBackupWarning=1;//if true, show a "Have you backed up your save?" message on save load; set to false when save is exported
 			Game.prefs.extraButtons=1;//if true, show Mute buttons and the building master bar
 			Game.prefs.askLumps=0;//if true, show a prompt before spending lumps
-			Game.prefs.customGrandmas=1;//if true, show patreon names for grandmas
+			Game.prefs.customGrandmas=0;//if true, use community-submitted grandma names
 			Game.prefs.timeout=0;//if true, game may show pause screen when timed out
 			Game.prefs.cloudSave=1;//if true and on Steam, save and load to cloud
 			Game.prefs.bgMusic=1;//if true and on Steam, play music even when game isn't focused
@@ -2494,7 +2483,13 @@ Game.Launch=function()
 		
 		Game.GrabData=function()
 		{
-			if (!App) ajax('grab.txt',Game.GrabDataResponse);
+			if (!App)
+			{
+				// Try live service first, fall back to bundled data if it fails to parse
+				ajax('https://orteil.dashnet.org/patreon/grab.php',function(res){
+					if (!Game.GrabDataResponse(res)) ajax('grab.txt',Game.GrabDataResponse);
+				});
+			}
 			else App.grabData(function(res){
 				Game.heralds=res?(res.playersN||1):1;
 				Game.heralds=Math.max(0,Math.min(100,Math.ceil(Game.heralds/100*100)/100));
@@ -2509,6 +2504,8 @@ Game.Launch=function()
 			*/
 			var r={};
 			try{
+				// strip BOM if present, then parse
+				response=response.replace(/^\uFEFF/,'');
 				r=JSON.parse(response);
 				if (typeof r['herald']!=='undefined')
 				{
@@ -2523,7 +2520,8 @@ Game.Launch=function()
 				
 				l('heraldsAmount').textContent=Math.floor(Game.heralds);
 				Game.externalDataLoaded=true;
-			}catch(e){}
+				return true;
+			}catch(e){return false;}
 		}
 		
 		
@@ -2546,12 +2544,6 @@ Game.Launch=function()
 			Game.attachTooltip(l('topbarTwitter'),'<div style="padding:8px;width:250px;text-align:center;">Orteil\'s twitter, which frequently features game updates.</div>','this');
 			Game.attachTooltip(l('topbarTumblr'),'<div style="padding:8px;width:250px;text-align:center;">Orteil\'s tumblr, which frequently features game updates.</div>','this');
 			Game.attachTooltip(l('topbarDiscord'),'<div style="padding:8px;width:250px;text-align:center;">Our official discord server.<br>You can share tips and questions about Cookie Clicker and all our other games!</div>','this');
-			Game.attachTooltip(l('topbarPatreon'),'<div style="padding:8px;width:250px;text-align:center;">Support us on Patreon and help us keep updating Cookie Clicker!<br>There\'s neat rewards for patrons too!</div>','this');
-			Game.attachTooltip(l('topbarMerch'),'<div style="padding:8px;width:250px;text-align:center;">Cookie Clicker shirts, hoodies and stickers!</div>','this');
-			Game.attachTooltip(l('topbarMobileCC'),'<div style="padding:8px;width:250px;text-align:center;">Play Cookie Clicker on your phone!<br>(Android only; iOS version will be released later)</div>','this');
-			Game.attachTooltip(l('topbarSteamCC'),'<div style="padding:8px;width:250px;text-align:center;">Get Cookie Clicker on Steam!<br>Featuring music by C418.</div>','this');
-			Game.attachTooltip(l('topbarRandomgen'),'<div style="padding:8px;width:250px;text-align:center;">A thing we made that lets you write random generators.</div>','this');
-			Game.attachTooltip(l('topbarIGM'),'<div style="padding:8px;width:250px;text-align:center;">A thing we made that lets you create your own idle games using a simple scripting language.</div>','this');
 			l('changeLanguage').innerHTML=loc("Change language");
 			l('links').childNodes[0].nodeValue=loc("Other versions");
 			//l('linkVersionBeta').innerHTML=loc("Beta");
@@ -2563,7 +2555,7 @@ Game.Launch=function()
 			if (!App && !Game.externalDataLoaded) str+=loc("Heralds couldn't be loaded. There may be an issue with our servers, or you are playing the game locally.");
 			else
 			{
-				if (!App && Game.heralds==0) str+=loc("There are no heralds at the moment. Please consider <b style=\"color:#bc3aff;\">donating to our Patreon</b>!");
+				if (!App && Game.heralds==0) str+=loc("There are no heralds at the moment.");
 				else
 				{
 					str+='<b style="color:#bc3aff;text-shadow:0px 1px 0px #6d0096;">'+loc("%1 herald",Game.heralds)+'</b> '+loc("selflessly inspiring a boost in production for everyone, resulting in %1.",'<br><b style="color:#cdaa89;text-shadow:0px 1px 0px #7c4532,0px 0px 6px #7c4532;"><div style="width:16px;height:16px;display:inline-block;vertical-align:middle;background:url(img/money.png);"></div>'+loc("+%1% cookies per second",Game.heralds)+'</b>');
@@ -2573,7 +2565,7 @@ Game.Launch=function()
 					else str+=loc("To benefit from the herald bonus, you need a special upgrade you do not yet own. You will permanently unlock it later in the game.");
 				}
 			}
-			str+='<div class="line"></div><span style="font-size:90%;opacity:0.6;">'+(!App?loc("<b>Heralds</b> are people who have donated to our highest Patreon tier, and are limited to 100.<br>Each herald gives everyone +1% CpS.<br>Heralds benefit everyone playing the game, regardless of whether you donated."):loc("Every %1 current players on Steam generates <b>1 herald</b>, up to %2 heralds.<br>Each herald gives everyone +1% CpS.",[100,100]))+'</span><div class="line"></div>'+tinyIcon([21,29]);
+			str+='<div class="line"></div><span style="font-size:90%;opacity:0.6;">'+loc("Heralds are a global community bonus; each one grants everyone <b>+1% CpS</b>.")+'</span><div class="line"></div>'+tinyIcon([21,29]);
 			
 			str+='<div style="width:31px;height:39px;background:url(img/heraldFlag.png);position:absolute;top:0px;left:8px;"></div><div style="width:31px;height:39px;background:url(img/heraldFlag.png);position:absolute;top:0px;right:8px;"></div>';
 			
@@ -2994,7 +2986,7 @@ Game.Launch=function()
 						Game.prefs.showBackupWarning=spl[16]?parseInt(spl[16]):1;
 						Game.prefs.extraButtons=spl[17]?parseInt(spl[17]):1;if (!Game.prefs.extraButtons) Game.removeClass('extraButtons'); else if (Game.prefs.extraButtons) Game.addClass('extraButtons');
 						Game.prefs.askLumps=spl[18]?parseInt(spl[18]):0;
-						Game.prefs.customGrandmas=spl[19]?parseInt(spl[19]):1;
+						Game.prefs.customGrandmas=spl[19]?parseInt(spl[19]):0;
 						Game.prefs.timeout=spl[20]?parseInt(spl[20]):0;
 						Game.prefs.cloudSave=spl[21]?parseInt(spl[21]):1;
 						Game.prefs.bgMusic=spl[22]?parseInt(spl[22]):1;
@@ -4903,10 +4895,13 @@ Game.Launch=function()
 					e.preventDefault();
 				}
 			}
+			var modKey=(e.ctrlKey||e.metaKey);
 			if (!Game.OnAscend && Game.AscendTimer==0)
 			{
-				if (e.ctrlKey && e.keyCode==83) {Game.toSave=true;e.preventDefault();}//ctrl-s saves the game
-				else if (e.ctrlKey && e.keyCode==79) {Game.ImportSave();e.preventDefault();}//ctrl-o opens the import menu
+				if (modKey && e.keyCode==83) {Game.toSave=true;e.preventDefault();}//cmd/ctrl-s saves the game
+				else if (modKey && e.keyCode==69) {Game.ExportSave();e.preventDefault();}//cmd/ctrl-e export save
+				else if (modKey && e.keyCode==73) {Game.ImportSave();e.preventDefault();}//cmd/ctrl-i import save
+				else if (modKey && e.keyCode==188) {Game.ShowMenu('prefs');e.preventDefault();}//cmd/ctrl-, open settings
 			}
 			if ((e.keyCode==16 || e.keyCode==17) && Game.tooltip.dynamic) Game.tooltip.update();
 			Game.keys[e.keyCode]=1;
@@ -6652,7 +6647,6 @@ Game.Launch=function()
 							//Game.WritePrefButton('focus','focusButton',loc("Defocus")+OFF,loc("Defocus")+ON,0,1)+'<label>('+loc("the game will be less resource-intensive when out of focus")+')</label><br>'+
 							Game.WritePrefButton('extraButtons','extraButtonsButton',loc("Extra buttons")+ON,loc("Extra buttons")+OFF,'Game.ToggleExtraButtons();')+'<label>('+loc("add options on buildings like Mute")+')</label><br>'+
 							Game.WritePrefButton('askLumps','askLumpsButton',loc("Lump confirmation")+ON,loc("Lump confirmation")+OFF)+'<label>('+loc("the game will ask you to confirm before spending sugar lumps")+')</label><br>'+
-							(!App?Game.WritePrefButton('customGrandmas','customGrandmasButton',loc("Custom grandmas")+ON,loc("Custom grandmas")+OFF)+'<label>('+loc("some grandmas will be named after Patreon supporters")+')</label><br>':'')+
 							Game.WritePrefButton('notScary','notScaryButton',loc("Scary stuff")+OFF,loc("Scary stuff")+ON,0,1)+'<br>'+
 							Game.WritePrefButton('timeout','timeoutButton',loc("Sleep mode timeout")+ON,loc("Sleep mode timeout")+OFF)+'<label>('+loc("on slower computers, the game will put itself in sleep mode when it's inactive and starts to lag out; offline CpS production kicks in during sleep mode")+')</label><br>'+
 							Game.WritePrefButton('screenreader','screenreaderButton',loc("Screen reader mode")+ON,loc("Screen reader mode")+OFF,'Game.toSave=true;Game.toReload=true;')+'<label>('+loc("allows optimizations for screen readers; game will reload")+')</label><br>'+
@@ -8343,7 +8337,7 @@ Game.Launch=function()
 							}
 							if (Game.prefs.customGrandmas && Game.customGrandmaNames.length>0)
 							{
-								var str=loc("Names in white were submitted by our supporters on Patreon.");
+								var str=loc("Names in white were submitted by community supporters.");
 								ctx.globalAlpha=0.75;
 								ctx.fillStyle='#000';
 								ctx.font='9px Merriweather';
@@ -8546,7 +8540,6 @@ Game.Launch=function()
 		}
 		Game.BuildStore=function()//create the DOM for the store's buildings
 		{
-			//if (typeof showAds!=='undefined') l('store').scrollTop=100;
 			
 			var str='';
 			str+='<div id="storeBulk" class="storePre" '+Game.getTooltip(
@@ -11166,7 +11159,7 @@ Game.Launch=function()
 		order=1200;Game.TieredUpgrade('0-sided dice','<q>The advent of the 0-sided dice has had unexpected and tumultuous effects on the gambling community, and saw experts around the world calling you both a genius and an imbecile.</q>','Chancemaker',11);
 		
 		
-		new Game.Upgrade('Heralds',loc("You now benefit from the boost provided by <b>heralds</b>.<br>Each herald gives you <b>+1% CpS</b>.<br>Look on the purple flag at the top to see how many heralds are active at any given time.")+(App?'<q>It\'s getting steamy.</q>':'<q>Be excellent to each other.<br>And Patreon, dudes!</q>'),100,[21,29]);Game.last.pool='prestige';
+		new Game.Upgrade('Heralds',loc("You now benefit from the boost provided by <b>heralds</b>.<br>Each herald gives you <b>+1% CpS</b>.<br>Look on the purple flag at the top to see how many heralds are active at any given time.")+(App?'<q>It\'s getting steamy.</q>':'<q>Be excellent to each other.</q>'),100,[21,29]);Game.last.pool='prestige';
 		
 		order=255;
 		Game.GrandmaSynergy('Metagrandmas','A fractal grandma to make more grandmas to make more cookies.','Fractal engine');
@@ -16115,7 +16108,6 @@ Game.Launch=function()
 		else setTimeout(function(){Game.LoadSave();},100);
 		
 		Game.ready=1;
-		setTimeout(function(){if (typeof showAds==='undefined' && (!l('detectAds') || l('detectAds').clientHeight<1)) Game.addClass('noAds');},500);
 		l('offGameMessage').innerHTML='';
 		l('offGameMessageWrap').style.display='none';
 		Game.Loop();
@@ -16635,7 +16627,7 @@ Game.Launch=function()
 		
 		if (App && App.logic) App.logic(Game.T);
 		
-		//every hour: get server data (ie. update notification, patreon, steam etc)
+		//every hour: get server data (ie. update notification etc)
 		if (Game.T%(Game.fps*60*60)==0 && Game.T>Game.fps*10/* && Game.prefs.autoupdate*/) {Game.CheckUpdates();Game.GrabData();}
 		
 		Game.T++;

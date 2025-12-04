@@ -23,4 +23,3 @@ cd ../
 wget -O index.html http://orteil.dashnet.org/cookieclicker/
 wget -O style.css http://orteil.dashnet.org/cookieclicker/style.css
 wget -N -i _jslist.txt -B http://orteil.dashnet.org/cookieclicker/
-wget -O grab.txt http://orteil.dashnet.org/patreon/grab.php

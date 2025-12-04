@@ -1,0 +1,15 @@
+{
+  "name": "cookieclicker-electron",
+  "productName": "Cookie Clicker",
+  "version": "2.052.0",
+  "description": "Electron wrapper for Cookie Clicker",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-packager . \"Cookie Clicker\" --platform=darwin --arch=x64,arm64 --out=dist --overwrite --prune=true --asar --ignore=\"^dist$\""
+  },
+  "devDependencies": {
+    "@electron/packager": "^19.0.1",
+    "electron": "^35.7.5"
+  }
+}
