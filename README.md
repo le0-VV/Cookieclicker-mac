@@ -4,7 +4,9 @@
 
 The original game can be found at http://orteil.dashnet.org/cookieclicker/
 
-This is a macOS build of Cookie Clicker made using electron, forked from ozh's repo (http://ozh.github.io/cookieclicker/)
+This is a macOS build of Cookie Clicker made using electron, with the build process written entirely with ChatGPT Codex.
+
+Forked from ozh's repo (http://ozh.github.io/cookieclicker/)
 
 ### How to update
 
