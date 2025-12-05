@@ -230,7 +230,7 @@ M.launch=function()
 				if (min>=500) Game.Win('No nobility in poverty');
 				me.last=1;
 				me.prev=costInS;
-				PlaySound('sounds/cashOut.mp3',0.4);
+				PlaySound('assets/sounds/cashOut.mp3',0.4);
 				return true;
 			}
 			return false;
@@ -253,7 +253,7 @@ M.launch=function()
 				Game.cookiesEarned=Math.max(Game.cookies,Game.cookiesEarned);
 				me.stock-=n;
 				me.last=2;
-				PlaySound('sounds/cashIn.mp3',0.4);
+				PlaySound('assets/sounds/cashIn.mp3',0.4);
 				return true;
 			}
 			return false;
@@ -416,7 +416,7 @@ M.launch=function()
 		
 		var str='';
 		str+='<style>'+
-		'#bankBG{background:url('+Game.resPath+'images/shadedBorders.png),url('+Game.resPath+'images/BGmarket.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
+		'#bankBG{background:url('+Game.resPath+'assets/images/shadedBorders.png),url('+Game.resPath+'assets/images/BGmarket.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
 		'#bankContent{position:relative;box-sizing:border-box;padding:4px;text-align:center;}'+
 		
 		'.bankGood{margin:2px;display:inline-block;width:156px;text-align:center;position:relative;left:0px;top:0px;right:0px;box-sizing:border-box;box-shadow:0px 0px 0px 1px rgba(255,255,255,0.1), 2px 2px 4px rgba(0,0,0,0.5) inset;background:rgba(0,0,0,0.9);color:rgba(255,255,255,0.7);}'+
@@ -438,8 +438,8 @@ M.launch=function()
 		'#bankGraphBox{background:#fff;position:relative;z-index:5;overflow:hidden;height:300px;}'+
 		'.bankGraphIcon{position:absolute;right:-24px;top:-24px;z-index:10;transform:scale(0);transition:transform 0.3s;}'+
 		//'.bankViewHide{position:absolute;z-index:10;padding:4px;top:-2px;right:0px;}'+
-		'.bankViewHide{position:absolute;z-index:10;width:14px;height:14px;background:url('+Game.resPath+'images/tinyEyeOn.png);top:1px;right:4px;opacity:0.8;}'+
-		'.bankHidden .bankViewHide{background:url('+Game.resPath+'images/tinyEyeOff.png);}'+
+		'.bankViewHide{position:absolute;z-index:10;width:14px;height:14px;background:url('+Game.resPath+'assets/images/tinyEyeOn.png);top:1px;right:4px;opacity:0.8;}'+
+		'.bankHidden .bankViewHide{background:url('+Game.resPath+'assets/images/tinyEyeOff.png);}'+
 		'.bankSimpleButton{font-weight:bold;font-size:10px;cursor:pointer;text-decoration:underline;color:rgba(255,255,255,0.9);text-shadow:0px 1px #000;}'+
 		'.bankSimpleButton:hover{color:#fff;opacity:1;}'+
 		'.bankSimpleButton:active{opacity:0.5;}'+
@@ -520,14 +520,14 @@ M.launch=function()
 			if (M.graphLines==0) M.graphLines=1;
 			else M.graphLines=0;
 			M.toRedraw=2;
-			PlaySound('sounds/tick.mp3');
+			PlaySound('assets/sounds/tick.mp3');
 		});
 		AddEvent(l('bankGraphCols'),'click',function(e){
 			if (M.graphCols==0) M.graphCols=1;
 			else M.graphCols=0;
 			M.setCols();
 			M.toRedraw=2;
-			PlaySound('sounds/tick.mp3');
+			PlaySound('assets/sounds/tick.mp3');
 		});
 		if (l('bankCheatSpeed'))
 		{
@@ -535,7 +535,7 @@ M.launch=function()
 			if (M.secondsPerTick==60) M.secondsPerTick=1/10;
 			else M.secondsPerTick=60;
 			M.toRedraw=2;
-			PlaySound('sounds/tick.mp3');
+			PlaySound('assets/sounds/tick.mp3');
 			});
 		}
 		
@@ -546,7 +546,7 @@ M.launch=function()
 				Game.Objects['Cursor'].sacrifice(me.cost[0]);
 				M.officeLevel+=1;
 				if (M.officeLevel>=M.offices.length-1) Game.Win('Pyramid scheme');
-				PlaySound('sounds/cashIn2.mp3',0.6);
+				PlaySound('assets/sounds/cashIn2.mp3',0.6);
 				Game.SparkleOn(e.target);
 			}
 		});
@@ -555,19 +555,19 @@ M.launch=function()
 			{
 				Game.Spend(M.getBrokerPrice());
 				M.brokers+=1;
-				PlaySound('sounds/cashIn2.mp3',0.6);
+				PlaySound('assets/sounds/cashIn2.mp3',0.6);
 				Game.SparkleOn(e.target);
 			}
 		});
 		
 		AddEvent(l('bankLoan1'),'click',function(e){
-			if (M.takeLoan(1)) {PlaySound('sounds/cashIn2.mp3',0.6);Game.SparkleOn(e.target);}
+			if (M.takeLoan(1)) {PlaySound('assets/sounds/cashIn2.mp3',0.6);Game.SparkleOn(e.target);}
 		});
 		AddEvent(l('bankLoan2'),'click',function(e){
-			if (M.takeLoan(2)) {PlaySound('sounds/cashIn2.mp3',0.6);Game.SparkleOn(e.target);}
+			if (M.takeLoan(2)) {PlaySound('assets/sounds/cashIn2.mp3',0.6);Game.SparkleOn(e.target);}
 		});
 		AddEvent(l('bankLoan3'),'click',function(e){
-			if (M.takeLoan(3)) {PlaySound('sounds/cashIn2.mp3',0.6);Game.SparkleOn(e.target);}
+			if (M.takeLoan(3)) {PlaySound('assets/sounds/cashIn2.mp3',0.6);Game.SparkleOn(e.target);}
 		});
 		
 		for (var i=0;i<M.goodsById.length;i++)
@@ -609,7 +609,7 @@ M.launch=function()
 				}
 				M.checkGraphScale();
 				M.toRedraw=2;
-				PlaySound('sounds/tick.mp3');
+				PlaySound('assets/sounds/tick.mp3');
 			}}(i));
 			
 			AddEvent(l('bankGood-'+i+'_1'),'click',function(i){return function(e){
