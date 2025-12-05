@@ -3063,7 +3063,7 @@ AddLanguage('ES','spanish',{
 	"[Achievement name 227]Are you gonna eat all that?": "¿Te vas a comer todo eso?",
 	"[Achievement name 228]We're gonna need a bigger bakery": "Vamos a necesitar una confitería más grande",
 	"[Achievement name 229]In the mouth of madness": "En la boca de la locura",
-	"[Achievement name 230]Brought to you by the letter <div style=\"display:inline-block;background:url(img/money.png);width:16px;height:16px;\"></div>": "Hoy toca esta letra <div style=\"display:inline-block;background:url(img/money.png);width:16px;height:16px;\"></div>",
+	"[Achievement name 230]Brought to you by the letter <div style=\"display:inline-block;background:url(images/money.png);width:16px;height:16px;\"></div>": "Hoy toca esta letra <div style=\"display:inline-block;background:url(images/money.png);width:16px;height:16px;\"></div>",
 	"[Achievement name 231]A world filled with cookies": "Un mundo lleno de galletas",
 	"[Achievement name 232]When this baby hits 36 quadrillion cookies per hour": "Cuando esta preciosidad alcanza los 36 cuatrillones de galletas por hora",
 	"[Achievement name 233]Fast and delicious": "Rápido y delicioso",

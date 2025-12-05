@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 
 let quitting = false;
@@ -10,7 +10,8 @@ const createWindow = () => {
     height: 800,
     webPreferences: {
       contextIsolation: true,
-      nodeIntegration: false
+      nodeIntegration: false,
+      preload: path.join(__dirname, 'preload.js')
     }
   });
   win.setMenuBarVisibility(false);
@@ -30,6 +31,21 @@ const createWindow = () => {
   mainWindow = win;
   return win;
 };
+
+ipcMain.on('app-quit', () => {
+  // Renderer requests a real app quit (Cmd+Q or menu equivalent).
+  if (quitting) return;
+  quitting = true;
+  app.quit();
+});
+
+ipcMain.on('app-reload', () => {
+  if (mainWindow) mainWindow.reload();
+});
+
+ipcMain.on('app-set-fullscreen', (_event, flag) => {
+  if (mainWindow) mainWindow.setFullScreen(!!flag);
+});
 
 app.whenReady().then(() => {
   const win = createWindow();

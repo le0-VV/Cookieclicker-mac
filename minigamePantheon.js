@@ -225,7 +225,7 @@ M.launch=function()
 			var y=box.top-box2.top;
 			div.style.transform='translate('+(x)+'px,'+(y)+'px)';
 			l('templeGodPlaceholder'+M.dragging.id).style.display='inline-block';
-			PlaySound('snd/tick.mp3');
+			PlaySound('sounds/tick.mp3');
 		}
 		M.dropGod=function()
 		{
@@ -237,7 +237,7 @@ M.launch=function()
 			{
 				if (M.dragging.slot!=-1) l('templeSlot'+M.dragging.slot).appendChild(div);
 				else l('templeGodPlaceholder'+(M.dragging.id)).parentNode.insertBefore(div,l('templeGodPlaceholder'+(M.dragging.id)));
-				PlaySound('snd/sell1.mp3',0.75);
+				PlaySound('sounds/sell1.mp3',0.75);
 			}
 			else if (M.slotHovered!=-1)//dropping on a slot
 			{
@@ -262,8 +262,8 @@ M.launch=function()
 				l('templeSlot'+M.slotHovered).appendChild(div);
 				M.slotGod(M.dragging,M.slotHovered);
 				
-				PlaySound('snd/tick.mp3');
-				PlaySound('snd/spirit.mp3',0.5);
+				PlaySound('sounds/tick.mp3');
+				PlaySound('sounds/spirit.mp3',0.5);
 				
 				var rect=div.getBounds();
 				Game.SparkleAt((rect.left+rect.right)/2,(rect.top+rect.bottom)/2-24+32-TopBarOffset);
@@ -274,7 +274,7 @@ M.launch=function()
 				other.parentNode.insertBefore(div,other);
 				other.style.display='none';
 				M.slotGod(M.dragging,-1);
-				PlaySound('snd/sell1.mp3',0.75);
+				PlaySound('sounds/sell1.mp3',0.75);
 			}
 			M.dragging=false;
 		}
@@ -287,7 +287,7 @@ M.launch=function()
 			{
 				if (M.slotHovered==-1) l('templeGodPlaceholder'+M.dragging.id).style.display='inline-block';
 				else l('templeGodPlaceholder'+M.dragging.id).style.display='none';
-				PlaySound('snd/clickb'+Math.floor(Math.random()*7+1)+'.mp3',0.75);
+				PlaySound('sounds/clickb'+Math.floor(Math.random()*7+1)+'.mp3',0.75);
 			}
 		}
 		
@@ -325,12 +325,12 @@ M.launch=function()
 		
 		var str='';
 		str+='<style>'+
-		'#templeBG{background:url('+Game.resPath+'img/shadedBorders.png),url('+Game.resPath+'img/BGpantheon.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
+		'#templeBG{background:url('+Game.resPath+'images/shadedBorders.png),url('+Game.resPath+'images/BGpantheon.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
 		'#templeContent{position:relative;box-sizing:border-box;padding:4px 24px;text-align:center;}'+
 		'#templeGods{text-align:center;width:100%;padding:8px;box-sizing:border-box;}'+
 		'.templeIcon{pointer-events:none;margin:12px 6px 0px 6px;width:48px;height:48px;opacity:0.8;position:relative;}'+
 		'.templeSlot .templeIcon{margin:2px 6px 0px 6px;}'+
-		'.templeGod{box-shadow:4px 4px 4px #000;cursor:pointer;position:relative;color:#f33;opacity:0.8;text-shadow:0px 0px 4px #000,0px 0px 6px #000;font-weight:bold;font-size:12px;display:inline-block;width:60px;height:74px;background:url('+Game.resPath+'img/spellBG.png);}'+
+		'.templeGod{box-shadow:4px 4px 4px #000;cursor:pointer;position:relative;color:#f33;opacity:0.8;text-shadow:0px 0px 4px #000,0px 0px 6px #000;font-weight:bold;font-size:12px;display:inline-block;width:60px;height:74px;background:url('+Game.resPath+'images/spellBG.png);}'+
 		'.templeGod.ready{color:rgba(255,255,255,0.8);opacity:1;}'+
 		'.templeGod.ready:hover{color:#fff;}'+
 		'.templeGod:hover,.templeDragged{box-shadow:6px 6px 6px 2px #000;z-index:1000000001;top:-1px;}'+
@@ -424,7 +424,7 @@ M.launch=function()
 			{Game.refillLump(1,function(){
 				M.swaps=3;
 				M.swapT=Date.now();
-				PlaySound('snd/pop'+Math.floor(Math.random()*3+1)+'.mp3',0.75);
+				PlaySound('sounds/pop'+Math.floor(Math.random()*3+1)+'.mp3',0.75);
 			});}
 		});
 		

@@ -3063,7 +3063,7 @@ AddLanguage('RU','russian',{
 	"[Achievement name 227]Are you gonna eat all that?": "Ты собираешься все это съесть?",
 	"[Achievement name 228]We're gonna need a bigger bakery": "Нам понадобится пекарня побольше",
 	"[Achievement name 229]In the mouth of madness": "В устах безумия",
-	"[Achievement name 230]Brought to you by the letter <div style=\"display:inline-block;background:url(img/money.png);width:16px;height:16px;\"></div>": "Принесено вам в письме <div style=\"display:inline-block;background:url(img/money.png);width:16px;height:16px;\"></div>",
+	"[Achievement name 230]Brought to you by the letter <div style=\"display:inline-block;background:url(images/money.png);width:16px;height:16px;\"></div>": "Принесено вам в письме <div style=\"display:inline-block;background:url(images/money.png);width:16px;height:16px;\"></div>",
 	"[Achievement name 231]A world filled with cookies": "Мир, заполненный печеньем",
 	"[Achievement name 232]When this baby hits 36 quadrillion cookies per hour": "Когда этот ребенок получит 36 квадриллионов печенек за час",
 	"[Achievement name 233]Fast and delicious": "Быстро и вкусно",

@@ -767,7 +767,7 @@ var LaunchDungeons=function()
 			'<div id="dungeonLog'+this.id+'" class="dungeonLog"></div>';
 			l('rowSpecial'+this.id).innerHTML='<div style="width:100%;height:100%;z-index:10000;position:absolute;left:0px;top:0px;">'+str+'</div>';
 			
-			l('picHero'+this.id).style.backgroundImage='url(img/'+this.hero.portrait+'.png)';
+			l('picHero'+this.id).style.backgroundImage='url(images/'+this.hero.portrait+'.png)';
 			l('nameHero'+this.id).innerHTML=this.hero.name;
 		}
 		this.Refresh=function()
@@ -794,15 +794,15 @@ var LaunchDungeons=function()
 			{
 				l('monsterSlot'+this.id).style.visibility='visible';
 				l('hpMonster'+this.id).style.width=Math.round((this.currentOpponent.stats.hp/this.currentOpponent.stats.hpm)*100)+'%';
-				l('picMonster'+this.id).style.backgroundImage='url(img/'+Game.Monsters[this.currentOpponent.subtype].pic+'.png)';
+				l('picMonster'+this.id).style.backgroundImage='url(images/'+Game.Monsters[this.currentOpponent.subtype].pic+'.png)';
 				l('nameMonster'+this.id).innerHTML=Game.Monsters[this.currentOpponent.subtype].name;
-				l('picHero'+this.id).style.backgroundImage='url(img/'+this.hero.pic+'.png)';
+				l('picHero'+this.id).style.backgroundImage='url(images/'+this.hero.pic+'.png)';
 			}
 			else
 			{
 				l('monsterSlot'+this.id).style.visibility='hidden';
 				l('hpMonster'+this.id).style.width='100%';
-				l('picHero'+this.id).style.backgroundImage='url(img/'+this.hero.portrait+'.png)';
+				l('picHero'+this.id).style.backgroundImage='url(images/'+this.hero.portrait+'.png)';
 			}
 			this.currentOpponent=0;
 			l('hpHero'+this.id).style.width=Math.round((this.heroEntity.stats.hp/this.heroEntity.stats.hpm)*100)+'%';
@@ -820,7 +820,7 @@ var LaunchDungeons=function()
 		{
 			var str='';
 			//str+='<div style="text-align:center;margin:48px auto;color:#999;"><a onclick="Game.ObjectsById['+this.id+'].setSpecial(1);">Enter</a></div>';
-			str+='<div style="width:144px;height:144px;position:absolute;left:0px;bottom:0px;"><a class="specialButtonPic" style="background-image:url(img/'+this.portalPic+'.png);" onclick="Game.ObjectsById['+this.id+'].setSpecial(1);"><div class="specialButtonText">Enter dungeons</div></a></div>';
+			str+='<div style="width:144px;height:144px;position:absolute;left:0px;bottom:0px;"><a class="specialButtonPic" style="background-image:url(images/'+this.portalPic+'.png);" onclick="Game.ObjectsById['+this.id+'].setSpecial(1);"><div class="specialButtonText">Enter dungeons</div></a></div>';
 			return str;
 		}
 		
