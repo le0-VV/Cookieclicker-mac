@@ -123,26 +123,45 @@ localStorageSet=function(key,str)
 }
 
 
-var ajax=function(url,callback)
+var ajax=function(url,callback,fail,options)
 {
-	if (Game.local) return false;
+	var opt=options||{};
+	if (Game.local && !opt.allowLocal)
+	{
+		if (fail) fail();
+		return false;
+	}
 	var httpRequest=new XMLHttpRequest();
-	if (!httpRequest){return false;}
+	if (!httpRequest)
+	{
+		if (fail) fail();
+		return false;
+	}
 	httpRequest.onreadystatechange=function()
 	{
 		try{
-			if (httpRequest.readyState===XMLHttpRequest.DONE && httpRequest.status===200)
+			if (httpRequest.readyState===XMLHttpRequest.DONE)
 			{
-				callback(httpRequest.responseText);
+				var okStatus=(httpRequest.status===200 || (opt.allowLocal && httpRequest.status===0));
+				if (okStatus)
+				{
+					if (callback) callback(httpRequest.responseText);
+				}
+				else if (fail) fail(httpRequest);
 			}
 		}catch(e){}
 	}
-	//httpRequest.onerror=function(e){console.log('ERROR',e);}
+	httpRequest.onerror=function(){if (fail) fail(httpRequest);};
+	if (opt.timeout)
+	{
+		httpRequest.timeout=opt.timeout;
+		httpRequest.ontimeout=function(){if (fail) fail(httpRequest);};
+	}
 	if (url.indexOf('?')==-1) url+='?'; else url+='&';
 	url+='nocache='+Date.now();
 	httpRequest.open('GET',url);
 	httpRequest.setRequestHeader('Content-Type','text/plain');
-	httpRequest.overrideMimeType('text/plain');
+	httpRequest.overrideMimeType(opt.mimeType||'text/plain');
 	httpRequest.send();
 	return true;
 }
@@ -2487,10 +2506,17 @@ Game.Launch=function()
 		{
 			if (!App)
 			{
-				// Try live service first, fall back to bundled data if it fails to parse
-				ajax('https://orteil.dashnet.org/patreon/grab.php',function(res){
-					if (!Game.GrabDataResponse(res)) ajax('../update/grab.txt',Game.GrabDataResponse);
-				});
+				// Try live service first, fall back to bundled data if it fails to load or parse
+				var fallbackTriggered=false;
+				var fallback=function(){
+					if (fallbackTriggered) return;
+					fallbackTriggered=true;
+					ajax('../update/grab.txt',Game.GrabDataResponse,null,{allowLocal:true});
+				};
+				var requestSent=ajax('https://orteil.dashnet.org/patreon/grab.php',function(res){
+					if (!Game.GrabDataResponse(res)) fallback();
+				},fallback,{timeout:5000});
+				if (!requestSent) fallback();
 			}
 			else App.grabData(function(res){
 				Game.heralds=res?(res.playersN||1):1;
